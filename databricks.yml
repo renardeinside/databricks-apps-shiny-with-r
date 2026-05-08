@@ -1,0 +1,16 @@
+bundle:
+  name: shiny-app-r
+
+resources:
+  apps:
+    shiny-app-r:
+      name: "shiny-app-r"
+      description: "Example of a Shiny app written in R - deployed in a Databricks app"
+      source_code_path: .
+      config:
+        command: ["uv", "run", "scripts/launcher.py"]
+
+targets:
+  dev:
+    mode: development
+    default: true

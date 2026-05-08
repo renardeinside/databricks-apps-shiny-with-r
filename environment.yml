@@ -1,0 +1,7 @@
+name: r-shiny-app
+channels:
+  - conda-forge
+dependencies:
+  - r-base=4.5.3
+  - r-shiny=1.13.0
+  - r-ggplot2=4.0.3
