@@ -13,17 +13,16 @@ This project shows how to use a lightweight Python launcher that bootstraps an R
 ## 🏗️ How it works
 
 ```
-┌─────────────────────────────────────────────────┐
-│  Databricks App Container                       │
-│                                                 │
-│  uv run scripts/launcher.py                     │
-│    ├── 1. Downloads micromamba          🐍        │
-│    ├── 2. Creates conda env from environment.yml │
-│    ├── 3. Installs R + packages         📦       │
-│    └── 4. Starts Shiny app via Rscript  🚀       │
-│                                                 │
-│  app/app.R ← serves on $DATABRICKS_APP_PORT     │
-└─────────────────────────────────────────────────┘
+Databricks App Instance
+=========================
+
+uv run scripts/launcher.py
+  |-- 1. Downloads micromamba
+  |-- 2. Creates conda env from environment.yml
+  |-- 3. Installs R + packages
+  '-- 4. Starts Shiny app via Rscript
+
+app/app.R  -->  serves on $DATABRICKS_APP_PORT
 ```
 
 The Shiny app queries **Databricks SQL** using the forwarded user token (`HTTP_X_FORWARDED_ACCESS_TOKEN`), so each user sees data scoped to their own permissions.
