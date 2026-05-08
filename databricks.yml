@@ -1,14 +1,23 @@
 bundle:
   name: shiny-app-r
 
+variables:
+  sql_warehouse_id:
+    description: "Databricks SQL Warehouse ID for query execution"
+
 resources:
   apps:
     shiny-app-r:
       name: "shiny-app-r"
       description: "Example of a Shiny app written in R - deployed in a Databricks app"
       source_code_path: .
+      user_api_scopes:
+        - sql
       config:
         command: ["uv", "run", "scripts/launcher.py"]
+        env:
+          - name: SQL_WAREHOUSE_ID
+            value: ${var.sql_warehouse_id}
 
 targets:
   dev:
