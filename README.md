@@ -4,7 +4,7 @@ A sample [Shiny](https://shiny.posit.co/) app written in **R** that runs nativel
 
 ![App screenshot](assets/example.png)
 
-## 🤔 Why is this interesting?
+## 🤔 What's the approach?
 
 Databricks Apps instances are shipped with **Python and `uv`**, but unfortunately doesn't have a preinstalled R runtime. 
 
