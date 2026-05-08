@@ -90,3 +90,11 @@ Databricks Apps handle auth automatically. The app reads the user's token from t
 2. Add any new R packages to `environment.yml`
 3. Update the SQL query or data source as needed
 4. Re-deploy with `databricks bundle deploy`
+
+## 📚 References
+
+- [Databricks Apps](https://docs.databricks.com/en/apps/index.html)
+- [micromamba](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html)
+- [Shiny](https://shiny.posit.co/)
+- [R](https://www.r-project.org/)
+- [uv](https://docs.astral.sh/uv/)
